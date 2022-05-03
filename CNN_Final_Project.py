@@ -65,7 +65,7 @@ class NN(NNBase):
         super().__init__()
 
         self.network = nn.Sequential(
-            nn.Conv2d(3, 3, kernel_size=3, padding=1, groups=3),  # (b x 32 x 32 x 3) depth-wise
+            nn.Conv2d(3, 3, kernel_size=3, padding=1, groups=3),  # (b x 3 x 32 x 32) depth-wise
             nn.Conv2d(3, 64, kernel_size=1),  # (b x 64 x 32 x 32)
             nn.ReLU(),  # Call Relu activation function
             nn.BatchNorm2d(64),  # Normalize channels
