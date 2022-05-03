@@ -77,7 +77,6 @@ class NN(NNBase):
             nn.ReLU()
         )
 
-        # test this out to see if there are improvements... this works for CNN
         self.linear = nn.Sequential(
             nn.Dropout(p=0.40, inplace=True),
             nn.Linear(32 * 32 * 3, 2048),
